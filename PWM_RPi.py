@@ -1,6 +1,4 @@
 
-from tkinter import*
-import tkinter.font
 from gpiozero import LED
 import RPi.GPIO 
 import time
