@@ -29,12 +29,12 @@ def Distance():
     time_stop = time.time()
   
     while GPIO.input(GPIO_ECHO) == 0:
-        TimeAtStart = time.time()
+        time_start = time.time()
  
     while GPIO.input(GPIO_ECHO) == 1:
-        TimeAtStop = time.time()
+        time_stop = time.time()
  
-    TimeElapsed = TimeAtStop - TimeAtStart
+    TimeElapsed = time_stop - time_start
     distance = (TimeElapsed * 34300) / 2
  
     return int(distance)
